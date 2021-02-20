@@ -3,7 +3,6 @@ import { Form, Jumbotron, Button, InputGroup, FormControl, ListGroup, Container 
 import { v1 as uudidv4 } from 'uuid';
 import './App.css';
 
-
 const App = () => {
   const firstRender = useRef(true);
   const [inputValue, setInputValue] = useState('');
@@ -18,8 +17,6 @@ const App = () => {
       id: uudidv4()
     }])
     setInputValue('');
-
-
   };
   const removeTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
@@ -29,7 +26,6 @@ const App = () => {
       firstRender.current = false
     } else {
       localStorage.setItem("Todo", JSON.stringify([...todos]))
-
     }
   }, [todos]);
 
@@ -48,9 +44,6 @@ const App = () => {
         <div className="list-group">
           <Form onSubmit={addTodo}>
             <InputGroup size="default" className="mb-3">
-
-            
-
               <FormControl type="text"
                 autoFocus
                 placeholder="Add a task..."
@@ -61,7 +54,6 @@ const App = () => {
                 <Button size="defatul" variant="info" type="submit">Add</Button>
               </InputGroup.Append>
             </InputGroup>
-
           </Form>
           {todos.map((todo) => (
             <ListGroup.Item key={todo.id} className="todo">
