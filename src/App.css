@@ -7,7 +7,6 @@
   justify-content: center;
   text-align: center;
   font-family: 'Reggae One', cursive;
-  
 }
 
 .jumbotron{
@@ -38,6 +37,3 @@ font-family: 'Reggae One', cursive;
   }
 } 
 
-i {
-  cursor: pointer;
-}
