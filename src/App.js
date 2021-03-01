@@ -40,7 +40,7 @@ const App = () => {
   return (
     <div className="App">
       <Jumbotron className="jumbotron" fluid>WHAT'S ON YOUR TODO LIST?</Jumbotron>
-      <Container>
+      <Container className="container">
         <div className="list-group">
           <Form onSubmit={addTodo}>
             <InputGroup size="default" className="mb-3">

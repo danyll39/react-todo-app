@@ -1,19 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
-
 
 .App {
   text-align: center;
   font-family: 'Reggae One', cursive;
-  
-
 }
 
 .jumbotron{
 background-color: rgb(121, 112, 145);
 font-size: 45px;
 font-family: 'Reggae One', cursive;
-
 }
 
+.container {
+  max-width: 500px;
+  max-height: 500px;
+}
 
