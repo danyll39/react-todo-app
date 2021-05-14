@@ -10,9 +10,15 @@
 }
 
 .jumbotron{
-background-color: rgb(121, 112, 145);
-font-size: 45px;
-font-family: 'Reggae One', cursive;
+background-color: rgb(66, 151, 157);
+background-image: url('checklist.png');
+background-repeat: no-repeat;
+margin-bottom: 0px;
+}
+.text {
+  font-family:'Reggae One', cursive;
+  font-size: 32px;
+  
 }
 
 .container {
@@ -27,6 +33,7 @@ font-family: 'Reggae One', cursive;
   align-items: center;
   justify-content: space-between;
   padding: 18px;
+  overflow-wrap: break-word;
 }
 
 
@@ -36,4 +43,3 @@ font-family: 'Reggae One', cursive;
     align-items: center;
   }
 } 
-

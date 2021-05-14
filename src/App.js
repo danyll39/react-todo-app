@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Form, Jumbotron, Button, InputGroup, FormControl, ListGroup, Container } from 'react-bootstrap';
-import { v1 as uudidv4 } from 'uuid';
+import { v1 as uudiv4 } from 'uuid';
 import './App.css';
 
 const App = () => {
   const firstRender = useRef(true);
   const [inputValue, setInputValue] = useState('');
   const [todos, setTodos] = useState([]);
-
+// add todo function 
   const addTodo = (e) => {
     e.preventDefault()
     if (inputValue.trim() === '') return
-
+// set todo to page 
     setTodos([...todos, {
       text: inputValue,
-      id: uudidv4()
+      id: uudiv4()
     }])
     setInputValue('');
   };
@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Jumbotron className="jumbotron" fluid>WHAT'S ON YOUR TODO LIST?</Jumbotron>
+      <Jumbotron className="jumbotron" fluid><h1 className="text">WHAT'S ON YOUR TODO LIST?</h1></Jumbotron>
       <Container className="container">
         <div className="list-group">
           <Form onSubmit={addTodo}>
@@ -57,6 +57,7 @@ const App = () => {
           </Form>
           {todos.map((todo) => (
             <ListGroup.Item key={todo.id} className="todo">
+              
               <p>{todo.text}</p>
               <i onClick={() => removeTodo(todo.id)} className="fas fa-trash-alt"></i>
             </ListGroup.Item>
